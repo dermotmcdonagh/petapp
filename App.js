@@ -826,7 +826,7 @@ const styles = StyleSheet.create({
 
   travelhighlight: { fontSize: 18 },
   travelcustom: { fontSize: 18, color: "teal" },
-  input: { marginBottom: 16 },
+  input: { marginBottom: 16, backgroundColor: "#ffffff" },
 
   passportTitle: {
     fontWeight: "bold",
