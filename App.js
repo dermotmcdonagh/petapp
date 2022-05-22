@@ -97,6 +97,44 @@ function ContactScreen() {
   );
 }
 
+function PaymentScreen() {
+  return (
+    <ScrollView style={styles.scrollView}>
+      <View style={styles.container}>
+   <Card style={styles.travelcard}>
+        
+        
+         <Button
+              title={"Credit Card / Crypto"}
+              onPress={() =>
+                alert('User journey for Credit Card/ Crypto')
+              }
+              style={styles.input}
+            />
+            </Card>
+             <Card style={styles.travelcard}>
+             <Button
+              title={"Apple Pay"}
+              onPress={() =>
+                alert('User journey for Apple Pay')
+              }
+              style={styles.input}
+            />
+            </Card>
+             <Card style={styles.travelcard}>
+             <Button
+              title={"Google Pay"}
+              onPress={() =>
+                alert('User journey for Google Pay')
+              }
+              style={styles.input}
+            />
+         
+        </Card>
+      </View>
+    </ScrollView>
+  );
+}
 function LanguageScreen() {
   return (
     <ScrollView style={styles.scrollView}>
@@ -446,6 +484,12 @@ function OwnerProfileScreen({ navigation }) {
 function SettingsScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: "space-evenly", margin: 24 }}>
+          <Card style={styles.travelcard}>
+        <Button
+          title="Renewals"
+          onPress={() => navigation.navigate("Payment")}
+        />
+      </Card>
       <Card style={styles.travelcard}>
         <Button
           title="Language"
@@ -688,6 +732,7 @@ function SettingsStackScreen() {
       <SettingsStack.Screen name="Missing" component={MissingScreen} />
       <SettingsStack.Screen name="Deceased" component={DeceasedScreen} />
       <SettingsStack.Screen name="Feedback" component={FeedbackScreen} />
+      <SettingsStack.Screen name="Payment" component={PaymentScreen} />
     </SettingsStack.Navigator>
   );
 }
